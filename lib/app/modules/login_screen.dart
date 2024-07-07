@@ -4,6 +4,7 @@ import 'package:national_wild_animal/app/modules/sign_up_screen.dart';
 import '../common_widgets/background_widget.dart';
 
 import '../common_widgets/common_text_field_view.dart';
+import 'home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -22,34 +23,39 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: SizedBox(
-            height: usableHeight,
-            child: BackgroundWidget(size: size,
-              btnOnTap: () {
-                debugPrint(">>>>>>>>>>>>>btnOnTap Call");
-              }, buttonText: 'Log In', footerOnTap: () {
-              debugPrint(">>>>>>>>>>>>>footerOnTap Call");
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
-              },
-              footerTextOne: "You don't have an account ? ", footerTextTwo: 'sign-up', widgetLst: [
-                CommonTextFieldView(
-                  controller: TextEditingController(),
-                  // errorText: _errorFName,
-                  padding: const EdgeInsets.only(left: 2, right: 2),
-                  titleText: "email / phone No",
-                  hintText:"email / phone No",
-                  keyboardType: TextInputType.name,
-                  onChanged: (String txt) {},
-                  isAllowTopTitleView: false,
-                  suffixIcon: Icons.mail_outlined,
-                  radius: 1,
-                  height: 40,
-                ),
-              ],
-              headerText: 'Welcome Back ! ',)
+              height: usableHeight,
+              child: BackgroundWidget(
+                size: size,
+                btnOnTap: () {
+                  debugPrint(">>>>>>>>>>>>>btnOnTap Call");
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+                },
+                buttonText: 'Log In',
+                footerOnTap: () {
+                  debugPrint(">>>>>>>>>>>>>footerOnTap Call");
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
+                },
+                footerTextOne: "You don't have an account ? ",
+                footerTextTwo: 'sign-up',
+                widgetLst: [
+                  CommonTextFieldView(
+                    controller: TextEditingController(),
+                    // errorText: _errorFName,
+                    padding: const EdgeInsets.only(left: 2, right: 2),
+                    titleText: "email / phone No",
+                    hintText: "email / phone No",
+                    keyboardType: TextInputType.name,
+                    onChanged: (String txt) {},
+                    isAllowTopTitleView: false,
+                    suffixIcon: Icons.mail_outlined,
+                    radius: 1,
+                    height: 40,
+                  ),
+                ],
+                headerText: 'Welcome Back ! ',
+              )
 
-
-
-           /* Column(
+              /* Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
@@ -165,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     flex:1,child: Container()),
               ],
             ),*/
-          ),
+              ),
         ),
       ),
     );

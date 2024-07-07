@@ -16,7 +16,11 @@ class CommonTextFieldView extends StatelessWidget {
   final double? pad;
   final double? height;
   final double? radius;
+  final double? suffixIconSize;
+  final bool isLabelVisible;
   final IconData? suffixIcon;
+  final Color? suffixIconColor;
+  final Color? borderColor;
   final BuildContext? contextNew;
 
   const CommonTextFieldView(
@@ -36,7 +40,11 @@ class CommonTextFieldView extends StatelessWidget {
       this.radius = 10,
       this.contextNew,
       this.height = 34,
+      this.isLabelVisible = true,
         this.suffixIcon,
+        this.suffixIconSize,
+        this.suffixIconColor,
+        this.borderColor,
       this.enable = true});
 
   @override
@@ -60,24 +68,24 @@ class CommonTextFieldView extends StatelessWidget {
                 counterText: "",
                 // border: InputBorder.none,
                 // hintText: hintText,
-                labelText: hintText,
-                labelStyle: TextStyles(context).googleRubikFontsForButtonText(),
+                labelText: isLabelVisible?hintText:null,
+                labelStyle: isLabelVisible?TextStyles(context).googleRubikFontsForButtonText():null,
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(radius??10),
-                    borderSide: const BorderSide(color: Color(0xFF333649),width: 1)
+                    borderSide:  BorderSide(color: borderColor??const Color(0xFF333649),width: 1)
                 ),
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(radius??10),
-                    borderSide: const BorderSide(color: Color(0xFF333649),width: 1)
+                    borderSide:  BorderSide(color: borderColor??const Color(0xFF333649),width: 1)
                 ),
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(radius??10),
-                    borderSide: const BorderSide(color: Color(0xFF333649),width: 1)
+                    borderSide:  BorderSide(color: borderColor??const Color(0xFF333649),width: 1)
                 ),
                 fillColor: const Color(0xFF171224),
                 contentPadding: const EdgeInsets.only(left: 16,right: 14,top: 2,bottom: 2),
                 filled: true,
-                suffixIcon:  Icon(suffixIcon??Icons.email_outlined,size: 18,color: const Color(0xFFB74BFF) ,)
+                suffixIcon:  Icon(suffixIcon??Icons.email_outlined,size: suffixIconSize??18,color: suffixIconColor??const  Color(0xFFB74BFF) ,)
             ),
             keyboardType: keyboardType,
           ),

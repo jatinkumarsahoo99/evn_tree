@@ -46,6 +46,9 @@ class TextStyles{
     return GoogleFonts.rubik(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w600,fontSize: fontSize??20,color: const Color(0xFF808080)));
   }
 
+  TextStyle googleRubikFontsForText1({double ?fontSize , FontWeight? fontWeight}){
+    return GoogleFonts.rubik(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w600,fontSize: fontSize??20,color: const Color(0xFFFEFEFE)));
+  }
   TextStyle googleRubikFontsForText4({double ?fontSize , FontWeight? fontWeight}){
     return GoogleFonts.rubik(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w600,fontSize: fontSize??20,color: const Color(0xFF040415)));
   }
@@ -55,7 +58,7 @@ class TextStyles{
   }
 
   TextStyle googleRubikFontsForSecondaryText9({double ?fontSize , FontWeight? fontWeight}){
-    return GoogleFonts.rubik(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w500,fontSize: fontSize??12,color: const Color(0xFF000000)));
+    return GoogleFonts.raleway(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w500,fontSize: fontSize??12,color: const Color(0xFF000000)));
   }
 
   TextStyle googleRubikFontsForButtonText({double ?fontSize , FontWeight? fontWeight}){
@@ -63,16 +66,15 @@ class TextStyles{
   }
 
   TextStyle googleRubikFontsForText2({double ?fontSize , FontWeight? fontWeight}){
-    return GoogleFonts.rubik(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w500,fontSize: fontSize??16,color: const Color(0xFFB74BFF),
-        decoration: TextDecoration.underline,decorationColor: const Color(0xFFB74BFF)));
+    return GoogleFonts.raleway(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w500,fontSize: fontSize??16,color: const Color(0xFFB74BFF),));
   }
 
   TextStyle googleRubikFontsForText3({double ?fontSize , FontWeight? fontWeight}){
-    return GoogleFonts.rubik(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w500,fontSize: fontSize??16,color: const Color(0xFF2CBFD3),decorationColor: const Color(0xFF2CBFD3)));
+    return GoogleFonts.raleway(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w500,fontSize: fontSize??16,color: const Color(0xFF2CBFD3),decorationColor: const Color(0xFF2CBFD3)));
   }
 
   TextStyle googleRubikFontsForText5({double ?fontSize , FontWeight? fontWeight}){
-    return GoogleFonts.rubik(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w500,fontSize: fontSize??16,color: const Color(0xFF43CC7B),decorationColor: const Color(0xFF43CC7B)));
+    return GoogleFonts.raleway(textStyle: TextStyle(fontWeight: fontWeight??FontWeight.w500,fontSize: fontSize??16,color: const Color(0xFF43CC7B),decorationColor: const Color(0xFF43CC7B)));
   }
 
 
